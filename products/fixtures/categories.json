@@ -1,0 +1,42 @@
+[
+    {
+        "model": "products.productcategory",
+        "pk": 1,
+        "fields": {
+            "name": "?ôõöôð",
+            "description": "?ÿø¸ðýøõ ôû  þôõöô?"
+        }
+    },
+    {
+        "model": "products.productcategory",
+        "pk": 2,
+        "fields": {
+            "name": "?ñºò¹",
+            "description": null
+        }
+    },
+    {
+        "model": "products.productcategory",
+        "pk": 3,
+        "fields": {
+            "name": "?þòøýúø",
+            "description": ""
+        }
+    },
+    {
+        "model": "products.productcategory",
+        "pk": 4,
+        "fields": {
+            "name": "?ú¸õ¸¸ºð¨?",
+            "description": ""
+        }
+    },
+    {
+        "model": "products.productcategory",
+        "pk": 5,
+        "fields": {
+            "name": "?þôð¨úø",
+            "description": ""
+        }
+    }
+]
