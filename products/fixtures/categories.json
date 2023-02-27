@@ -3,15 +3,15 @@
         "model": "products.productcategory",
         "pk": 1,
         "fields": {
-            "name": "?ôõöôğ",
-            "description": "?ÿø¸ğıøõ ôû  şôõöô?"
+            "name": "ĞĞ¾Ğ²Ğ¸Ğ½ĞºĞ¸",
+            "description": ""
         }
     },
     {
         "model": "products.productcategory",
         "pk": 2,
         "fields": {
-            "name": "?ñºò¹",
+            "name": "ĞĞ´ĞµĞ¶Ğ´Ğ°",
             "description": null
         }
     },
@@ -19,7 +19,7 @@
         "model": "products.productcategory",
         "pk": 3,
         "fields": {
-            "name": "?şòøıúø",
+            "name": "ĞĞ±ÑƒĞ²ÑŒ",
             "description": ""
         }
     },
@@ -27,7 +27,7 @@
         "model": "products.productcategory",
         "pk": 4,
         "fields": {
-            "name": "?ú¸õ¸¸ºğ¨?",
+            "name": "ĞĞºÑĞµÑÑÑƒĞ°Ñ€Ñ‹",
             "description": ""
         }
     },
@@ -35,7 +35,7 @@
         "model": "products.productcategory",
         "pk": 5,
         "fields": {
-            "name": "?şôğ¨úø",
+            "name": "ĞŸĞ¾Ğ´Ğ°Ñ€ĞºĞ¸",
             "description": ""
         }
     }
