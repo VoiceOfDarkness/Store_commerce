@@ -1,9 +1,10 @@
-from django.shortcuts import render, redirect, HttpResponse
-from users.models import User
+from django.shortcuts import render, redirect
 from django.contrib import auth, messages
+from django.contrib.auth.decorators import login_required
 
 from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 from django.urls import reverse
+from products.models import Basket
 
 
 # Create your views here.
@@ -35,6 +36,7 @@ def registration(request):
     context = {'form': form}
     return render(request, 'users/registration.html', context)
 
+@login_required
 def profile(request):
     if request.method == 'POST':
         form = UserProfileForm(instance=request.user, data=request.POST, files=request.FILES)
@@ -43,12 +45,15 @@ def profile(request):
             return redirect(reverse('users:profile'))
     else:
         form = UserProfileForm(instance=request.user)
+
+    baskets = Basket.objects.filter(user=request.user)
     context = {
         'title': 'Store - Профиль',
-        'form': form
+        'form': form,
+        'baskets': baskets,
     } 
     return render(request, 'users/profile.html', context) 
 
 def logout(request):
     auth.logout(request)
-    return redirect(reverse('index'))
+    return redirect(reverse('index')) 
