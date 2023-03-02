@@ -15,7 +15,7 @@
                         <input name="basketID" type="number" class="form-control"
                             value="{{ basket.quantity }}" min="0">
                     </div>
-                    <div class="col-lg-4">{{ basket.sum }}.</div>
+                    <div class="col-lg-4">{{ basket.product.price }}.</div>
                     <div class="col-lg-4">
                         <a href="{% url 'products:basket_remove' basket.id %}">
                             <i class="fas fa-trash"></i>
@@ -40,4 +40,3 @@
         Корзина пуста<span class="badge badge-secondary badge-pill"></span>
     </h4>
 {% endif %}
-
