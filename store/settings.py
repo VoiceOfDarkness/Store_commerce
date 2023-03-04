@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-&lnho09kzq-94srgj1+6@s0-zu-*$nsao4v+yp#-0$c4*gzz9%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+DOMAIN_NAME = 'http://127.0.0.1:8000'
 
 
 # Application definition
@@ -37,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
     'products',
     'users',
 ]
@@ -65,6 +66,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'products.context_processors.baskets',
             ],
         },
     },
@@ -136,5 +138,16 @@ MEDIA_ROOT = BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Users
-AUTH_USER_MODEL = 'users.User' 
+
+AUTH_USER_MODEL = 'users.User'
 LOGIN_URL = '/users/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+# Sending Email
+
+EMAIL_HOST = 'smtp.yandex.com'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'serverstore999@yandex.ru'
+EMAIL_HOST_PASSWORD = 'Store999.'
+EMAIL_USE_SSL = True
