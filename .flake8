@@ -3,4 +3,6 @@
 exclude = 
     migrations
 
+ignore = W293
+
 max-line-length = 120
