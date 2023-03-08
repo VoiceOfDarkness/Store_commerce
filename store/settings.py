@@ -40,12 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.github',
     'debug_toolbar',
     'products',
+    'orders',
     'users',
 ]
 
@@ -207,3 +209,9 @@ SOCIALACCOUNT_PROVIDERS = {
 
 CELERY_BROKER_URL = 'redis://127.0.0.1:6379'
 CELERY_RESULT_BACKEND = 'redis://127.0.0.1:6379'
+
+# Stripe
+
+STRIPE_PUBLIC_KEY = 'pk_test_51Mj16VB2ArSjnk2v1BKNUtDpsgcQMhuiC8ZHgAnVjfOL1bOEoI9oGYhR7zlMuDB57cKsLVxUmoXAdQS2YzcFYF1N00wK7JDp0o'
+STRIPE_SECRET_KEY = 'sk_test_51Mj16VB2ArSjnk2vQg39han3IBYzRbCxC99YoZV3gN3ex9POwOOsohPWhqcCHDbfZ0R2br3mPCrLvP7XHcrBcljN00bMt1sKT7'
+STRIPE_WEBHOOK_SECRET = 'whsec_c138ad9a3ee5b7338a66bb88df4653bb0266ef60e76afba907958ec48089c6af'
